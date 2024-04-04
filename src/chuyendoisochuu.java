@@ -1,23 +1,6 @@
 import java.util.Scanner;
 
 public class chuyendoisochuu {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Nhập số: ");
-        int number = input.nextInt(); // 123
-        int hangNghin = number / 1000;
-        readNumber(hangNghin);
-        System.out.printf(" Nghìn ");
-        int hangTram = (number / 100) % 10;
-        readNumber(hangTram);
-        System.out.printf(" Trăm ");
-        int hangChuc = (number / 10) % 10; // 123 / 10 = 12 % 10 = 2; 198 => 198 / 10 = 19 /
-        readNumber(hangChuc);
-        System.out.printf(" Mươi ");
-        int hangDonVi = number % 10;
-        readNumber(hangDonVi);
-    }
-
     public static void readNumber(int number) {
         switch (number) {
             case 0:
@@ -51,6 +34,23 @@ public class chuyendoisochuu {
                 System.out.printf(" Chín ");
                 break;
         }
+
     }
 
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Nhập số: ");
+        int number = input.nextInt(); // 123
+        int hangNghin = number / 1000;
+        readNumber(hangNghin);
+        System.out.printf(" Nghìn ");
+        int hangTram = (number / 100) % 10;
+        readNumber(hangTram);
+        System.out.printf(" Trăm ");
+        int hangChuc = (number / 10) % 10; // 123 / 10 = 12 % 10 = 2; 198 => 198 / 10 = 19 /
+        readNumber(hangChuc);
+        System.out.printf(" Mươi ");
+        int hangDonVi = number % 10;
+        readNumber(hangDonVi);
+    }
 }
